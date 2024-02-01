@@ -14,6 +14,7 @@
 		63AC79182B6BC9420022991A /* PuppyPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC79172B6BC9420022991A /* PuppyPickerTests.swift */; };
 		63AC79222B6BC9420022991A /* PuppyPickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC79212B6BC9420022991A /* PuppyPickerUITests.swift */; };
 		63AC79242B6BC9420022991A /* PuppyPickerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC79232B6BC9420022991A /* PuppyPickerUITestsLaunchTests.swift */; };
+		63AC793C2B6BCBBD0022991A /* IndividualBreedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC793B2B6BCBBD0022991A /* IndividualBreedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		63AC791D2B6BC9420022991A /* PuppyPickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuppyPickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63AC79212B6BC9420022991A /* PuppyPickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuppyPickerUITests.swift; sourceTree = "<group>"; };
 		63AC79232B6BC9420022991A /* PuppyPickerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuppyPickerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		63AC793B2B6BCBBD0022991A /* IndividualBreedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualBreedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +96,12 @@
 		63AC79052B6BC93F0022991A /* PuppyPicker */ = {
 			isa = PBXGroup;
 			children = (
-				63AC79062B6BC93F0022991A /* PuppyPickerApp.swift */,
-				63AC79082B6BC93F0022991A /* ContentView.swift */,
+				63AC79342B6BCAF40022991A /* App */,
+				63AC79372B6BCB5C0022991A /* Root */,
+				63AC79362B6BCB340022991A /* BreedList */,
+				63AC79352B6BCB260022991A /* IndividualBreed */,
+				63AC79332B6BCAEE0022991A /* Networking */,
+				63AC79322B6BCAEC0022991A /* Model */,
 				63AC790A2B6BC9420022991A /* Assets.xcassets */,
 				63AC790C2B6BC9420022991A /* Preview Content */,
 			);
@@ -125,6 +131,91 @@
 				63AC79232B6BC9420022991A /* PuppyPickerUITestsLaunchTests.swift */,
 			);
 			path = PuppyPickerUITests;
+			sourceTree = "<group>";
+		};
+		63AC79302B6BCAE60022991A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		63AC79312B6BCAE90022991A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		63AC79322B6BCAEC0022991A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63AC79332B6BCAEE0022991A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		63AC79342B6BCAF40022991A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				63AC79062B6BC93F0022991A /* PuppyPickerApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		63AC79352B6BCB260022991A /* IndividualBreed */ = {
+			isa = PBXGroup;
+			children = (
+				63AC793A2B6BCB970022991A /* View */,
+				63AC79392B6BCB950022991A /* ViewModel */,
+			);
+			path = IndividualBreed;
+			sourceTree = "<group>";
+		};
+		63AC79362B6BCB340022991A /* BreedList */ = {
+			isa = PBXGroup;
+			children = (
+				63AC79312B6BCAE90022991A /* View */,
+				63AC79302B6BCAE60022991A /* ViewModel */,
+			);
+			path = BreedList;
+			sourceTree = "<group>";
+		};
+		63AC79372B6BCB5C0022991A /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				63AC79382B6BCB680022991A /* View */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		63AC79382B6BCB680022991A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63AC79082B6BC93F0022991A /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		63AC79392B6BCB950022991A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		63AC793A2B6BCB970022991A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63AC793B2B6BCBBD0022991A /* IndividualBreedView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63AC79092B6BC93F0022991A /* ContentView.swift in Sources */,
+				63AC793C2B6BCBBD0022991A /* IndividualBreedView.swift in Sources */,
 				63AC79072B6BC93F0022991A /* PuppyPickerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
