@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6321F1EC2B6C37CE00671F9F /* BreedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6321F1EB2B6C37CE00671F9F /* BreedListViewModel.swift */; };
 		63AC79072B6BC93F0022991A /* PuppyPickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC79062B6BC93F0022991A /* PuppyPickerApp.swift */; };
 		63AC79092B6BC93F0022991A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC79082B6BC93F0022991A /* ContentView.swift */; };
 		63AC790B2B6BC9420022991A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63AC790A2B6BC9420022991A /* Assets.xcassets */; };
@@ -15,6 +16,9 @@
 		63AC79222B6BC9420022991A /* PuppyPickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC79212B6BC9420022991A /* PuppyPickerUITests.swift */; };
 		63AC79242B6BC9420022991A /* PuppyPickerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC79232B6BC9420022991A /* PuppyPickerUITestsLaunchTests.swift */; };
 		63AC793C2B6BCBBD0022991A /* IndividualBreedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC793B2B6BCBBD0022991A /* IndividualBreedView.swift */; };
+		63AC793E2B6BCF7B0022991A /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC793D2B6BCF7B0022991A /* Breed.swift */; };
+		63AC79402B6BD1640022991A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC793F2B6BD1640022991A /* APIManager.swift */; };
+		63AC79422B6BD98C0022991A /* BreedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC79412B6BD98C0022991A /* BreedListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6321F1EB2B6C37CE00671F9F /* BreedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewModel.swift; sourceTree = "<group>"; };
 		63AC79032B6BC93F0022991A /* PuppyPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuppyPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63AC79062B6BC93F0022991A /* PuppyPickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuppyPickerApp.swift; sourceTree = "<group>"; };
 		63AC79082B6BC93F0022991A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +51,9 @@
 		63AC79212B6BC9420022991A /* PuppyPickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuppyPickerUITests.swift; sourceTree = "<group>"; };
 		63AC79232B6BC9420022991A /* PuppyPickerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuppyPickerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		63AC793B2B6BCBBD0022991A /* IndividualBreedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualBreedView.swift; sourceTree = "<group>"; };
+		63AC793D2B6BCF7B0022991A /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
+		63AC793F2B6BD1640022991A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		63AC79412B6BD98C0022991A /* BreedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +144,7 @@
 		63AC79302B6BCAE60022991A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				6321F1EB2B6C37CE00671F9F /* BreedListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -143,6 +152,7 @@
 		63AC79312B6BCAE90022991A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				63AC79412B6BD98C0022991A /* BreedListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,6 +160,7 @@
 		63AC79322B6BCAEC0022991A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				63AC793D2B6BCF7B0022991A /* Breed.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,6 +168,7 @@
 		63AC79332B6BCAEE0022991A /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				63AC793F2B6BD1640022991A /* APIManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -348,9 +360,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6321F1EC2B6C37CE00671F9F /* BreedListViewModel.swift in Sources */,
+				63AC793E2B6BCF7B0022991A /* Breed.swift in Sources */,
 				63AC79092B6BC93F0022991A /* ContentView.swift in Sources */,
+				63AC79402B6BD1640022991A /* APIManager.swift in Sources */,
 				63AC793C2B6BCBBD0022991A /* IndividualBreedView.swift in Sources */,
 				63AC79072B6BC93F0022991A /* PuppyPickerApp.swift in Sources */,
+				63AC79422B6BD98C0022991A /* BreedListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +455,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -496,7 +512,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -522,6 +538,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -529,9 +546,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamespenny.PuppyPicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -551,6 +572,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -558,9 +580,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamespenny.PuppyPicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
