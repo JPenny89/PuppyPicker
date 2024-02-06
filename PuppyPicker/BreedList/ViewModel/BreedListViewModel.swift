@@ -22,7 +22,7 @@ class BreedListViewModel: ObservableObject {
         isLoading = true
         Task {
             do {
-                let dogBreeds = try await apiManager.fetchDogBreeds()
+                let dogBreeds = try await apiManager.fetchDogBreedsByAPI()
                 for breed in dogBreeds {
                     print(breed.displayName)
                     self.dogBreeds = dogBreeds.sorted(by: { $0.displayName < $1.displayName })

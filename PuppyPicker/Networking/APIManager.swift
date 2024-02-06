@@ -8,15 +8,13 @@
 import Foundation
 
 class APIManager {
+    static let shared = APIManager()
     
     enum DogAPIError: Error {
-//        case invalidResponse
-//        case noData
-//        case failedRequest
         case decodingError
     }
     
-    func fetchDogBreeds() async throws -> [DogBreed] {
+    func fetchDogBreedsByAPI() async throws -> [DogBreed] {
         let url = URL(string: "https://dog.ceo/api/breeds/list/all")!
         let (data, _) = try await URLSession.shared.data(from: url)
         do {
@@ -39,6 +37,19 @@ class APIManager {
             return dogBreeds
         } catch {
             throw DogAPIError.decodingError
+        }
+    }
+    
+    func fetchImagesFromAPI(breed: String) async throws -> [String]? {
+        let url = URL(string: "https://dog.ceo/api/breed/\(breed)/images/random/10")!
+        let (data, _) = try await URLSession.shared.data(from: url)
+        let decoder = JSONDecoder()
+        let imageResponse = try decoder.decode(ImageResponse.self, from: data)
+        if let images = imageResponse.message {
+            return images
+        } else {
+            print("No images available")
+            return nil
         }
     }
 }

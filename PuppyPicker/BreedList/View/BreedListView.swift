@@ -14,10 +14,10 @@ struct BreedListView: View {
     var body: some View {
         NavigationView {
             if !viewModel.dogBreeds.isEmpty {
-                List(viewModel.dogBreeds, id: \.displayName) { post in
-                    NavigationLink(destination: IndividualBreedView(breed: post.breed, subBreed: post.subBreed ?? "", displayName: post.displayName))
+                List(viewModel.dogBreeds, id: \.displayName) { dog in
+                    NavigationLink(destination: IndividualBreedView(breed: dog.breed))
                     {
-                        Text("\(post.displayName)")
+                        Text(dog.displayName.capitalized)
                     }
                 }
                 .navigationBarTitle("Breed List")

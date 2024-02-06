@@ -8,24 +8,41 @@
 import SwiftUI
 
 struct IndividualBreedView: View {
-    
-    var breed: String = ""
-    var subBreed: String = ""
-    var displayName: String = ""
+    @State private var isLoading = false
+    @ObservedObject var viewModel = IndividualBreedViewModel()
+    let breed: String
     
     var body: some View {
         VStack {
-            Spacer()
-            Text("breed = \(breed)")
-            Spacer()
-            Text("subBreed = \(subBreed)")
-            Spacer()
-            Text("displayName = \(displayName)")
-            Spacer()
+            if viewModel.isLoading {
+                ProgressView("Loading...")
+            } else {
+                if let images = viewModel.images {
+                    if images.isEmpty {
+                        Text("No subcategories available")
+                    } else {
+                        List(images, id: \.self) { image in
+                            AsyncImage(url: URL(string: image), content: { image in
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                            }, placeholder: {
+                                ProgressView("Loading...")
+                            })
+                        }
+                    }
+                } else {
+                    Text("No data available")
+                }
+            }
         }
+        .onAppear {
+            viewModel.fetchImages(breed: breed)
+        }
+        .navigationTitle(breed)
     }
 }
 
 #Preview {
-    IndividualBreedView()
+    IndividualBreedView(breed: "australian")
 }

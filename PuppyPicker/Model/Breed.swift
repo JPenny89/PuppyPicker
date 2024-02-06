@@ -29,3 +29,8 @@ struct DogBreed: Codable {
         }
     }
 }
+
+struct ImageResponse: Codable {
+    let message: [String]?
+    let status: String
+}
