@@ -9,14 +9,18 @@ import SwiftUI
 
 struct IndividualBreedView: View {
     
+    var breed: String = ""
+    var subBreed: String = ""
+    var displayName: String = ""
+    
     var body: some View {
-        HStack {
+        VStack {
             Spacer()
-            Image(systemName: "dog")
+            Text("breed = \(breed)")
             Spacer()
-            Text("Hello, Dog!")
+            Text("subBreed = \(subBreed)")
             Spacer()
-            Image(systemName: "dog")
+            Text("displayName = \(displayName)")
             Spacer()
         }
     }

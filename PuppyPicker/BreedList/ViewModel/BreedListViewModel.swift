@@ -8,28 +8,27 @@
 import Foundation
 
 class BreedListViewModel: ObservableObject {
-    @Published var breedResponse: BreedResponse?
+    @Published var dogBreeds: [DogBreed]
     @Published var isLoading = false
     private var apiManager: APIManager
     
     init() {
         self.apiManager = APIManager()
+        self.dogBreeds = [DogBreed]()
     }
     
+    @MainActor
     func fetchBreeds() {
         isLoading = true
         Task {
             do {
-                let fetchedBreeds = try await apiManager.fetchBreedsFromAPI()
-                DispatchQueue.main.async {
-                    self.breedResponse = fetchedBreeds
-                    self.isLoading = false
+                let dogBreeds = try await apiManager.fetchDogBreeds()
+                for breed in dogBreeds {
+                    print(breed.displayName)
+                    self.dogBreeds = dogBreeds.sorted(by: { $0.displayName < $1.displayName })
                 }
             } catch {
-                print("Error fetching breeds: \(error)")
-                DispatchQueue.main.async {
-                    self.isLoading = false
-                }
+                print("Error fetching dog breeds: \(error)")
             }
         }
     }

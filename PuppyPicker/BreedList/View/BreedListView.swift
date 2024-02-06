@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct BreedListView: View {
-    @State private var breedResponse: BreedResponse?
     @State private var isLoading = false
     @ObservedObject var viewModel = BreedListViewModel()
     
     var body: some View {
         NavigationView {
-            if viewModel.isLoading {
-                ProgressView("Loading...")
-            } else if let breedsResponse = viewModel.breedResponse {
-                List(breedsResponse.message.keys.sorted(), id: \.self) { breedName in
-                    NavigationLink(destination: IndividualBreedView()) {
-                        Text(breedName)
+            if !viewModel.dogBreeds.isEmpty {
+                List(viewModel.dogBreeds, id: \.displayName) { post in
+                    NavigationLink(destination: IndividualBreedView(breed: post.breed, subBreed: post.subBreed ?? "", displayName: post.displayName))
+                    {
+                        Text("\(post.displayName)")
                     }
                 }
                 .navigationBarTitle("Breed List")
+            } else if viewModel.isLoading {
+                ProgressView("Loading...")
             } else {
                 Text("No data available")
             }
