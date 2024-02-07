@@ -22,7 +22,6 @@ class IndividualBreedViewModel: ObservableObject {
         Task {
             do {
                 self.images = try await APIManager.shared.fetchImagesFromAPI(breed: breed)
-                print("images = \([images])")
             } catch {
                 print("Error fetching images: \(error)")
                 self.images = nil

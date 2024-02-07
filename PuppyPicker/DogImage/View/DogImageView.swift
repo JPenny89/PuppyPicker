@@ -16,7 +16,7 @@ struct DogImageView: View {
     var body: some View {
         VStack {
             SquareImageView(image: image)
-            Button("Find more \(displayName)s!") {
+            Button("Find more \(displayName.capitalized)s!") {
                 dismiss()
             }
             .modifier(ButtonModifier())
