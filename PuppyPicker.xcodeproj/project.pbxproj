@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6312C8BA2B73BFE500F8582B /* SquareImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6312C8B92B73BFE500F8582B /* SquareImageView.swift */; };
 		631BF0592B73B37200141C81 /* GridItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631BF0582B73B37200141C81 /* GridItems.swift */; };
 		631BF05B2B73B38100141C81 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631BF05A2B73B38100141C81 /* ButtonModifier.swift */; };
 		6321F1EC2B6C37CE00671F9F /* BreedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6321F1EB2B6C37CE00671F9F /* BreedListViewModel.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6312C8B92B73BFE500F8582B /* SquareImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareImageView.swift; sourceTree = "<group>"; };
 		631BF0582B73B37200141C81 /* GridItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItems.swift; sourceTree = "<group>"; };
 		631BF05A2B73B38100141C81 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 		6321F1EB2B6C37CE00671F9F /* BreedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewModel.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				631BF0582B73B37200141C81 /* GridItems.swift */,
 				631BF05A2B73B38100141C81 /* ButtonModifier.swift */,
+				6312C8B92B73BFE500F8582B /* SquareImageView.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				631BF0592B73B37200141C81 /* GridItems.swift in Sources */,
+				6312C8BA2B73BFE500F8582B /* SquareImageView.swift in Sources */,
 				638A28432B726D24005F1040 /* IndividualBreedViewModel.swift in Sources */,
 				63EEFE4F2B72D1B700D229CA /* DogImageView.swift in Sources */,
 				6321F1EC2B6C37CE00671F9F /* BreedListViewModel.swift in Sources */,

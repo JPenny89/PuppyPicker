@@ -50,5 +50,5 @@ struct IndividualBreedView: View {
 }
 
 #Preview {
-    IndividualBreedView(breed: "Retriever", displayName: "Curly Retriever")
+    IndividualBreedView(breed: "retriever", displayName: "curly retriever")
 }

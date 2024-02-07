@@ -9,12 +9,13 @@ import SwiftUI
 
 struct DogImageView: View {
     @Environment(\.dismiss) var dismiss
+    let grid = GridItems()
     let displayName: String
     var image: String
     
     var body: some View {
         VStack {
-            AsyncImage(url: URL(string: image))
+            SquareImageView(image: image)
             Button("Find more \(displayName)s!") {
                 dismiss()
             }
