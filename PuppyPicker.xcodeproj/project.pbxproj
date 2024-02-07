@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		631BF0592B73B37200141C81 /* GridItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631BF0582B73B37200141C81 /* GridItems.swift */; };
+		631BF05B2B73B38100141C81 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631BF05A2B73B38100141C81 /* ButtonModifier.swift */; };
 		6321F1EC2B6C37CE00671F9F /* BreedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6321F1EB2B6C37CE00671F9F /* BreedListViewModel.swift */; };
 		638A28432B726D24005F1040 /* IndividualBreedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638A28422B726D24005F1040 /* IndividualBreedViewModel.swift */; };
 		63AC79072B6BC93F0022991A /* PuppyPickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC79062B6BC93F0022991A /* PuppyPickerApp.swift */; };
@@ -20,6 +22,7 @@
 		63AC793E2B6BCF7B0022991A /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC793D2B6BCF7B0022991A /* Breed.swift */; };
 		63AC79402B6BD1640022991A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC793F2B6BD1640022991A /* APIManager.swift */; };
 		63AC79422B6BD98C0022991A /* BreedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC79412B6BD98C0022991A /* BreedListView.swift */; };
+		63EEFE4F2B72D1B700D229CA /* DogImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EEFE4E2B72D1B700D229CA /* DogImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		631BF0582B73B37200141C81 /* GridItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItems.swift; sourceTree = "<group>"; };
+		631BF05A2B73B38100141C81 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 		6321F1EB2B6C37CE00671F9F /* BreedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewModel.swift; sourceTree = "<group>"; };
 		638A28422B726D24005F1040 /* IndividualBreedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualBreedViewModel.swift; sourceTree = "<group>"; };
 		63AC79032B6BC93F0022991A /* PuppyPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuppyPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +61,7 @@
 		63AC793D2B6BCF7B0022991A /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		63AC793F2B6BD1640022991A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		63AC79412B6BD98C0022991A /* BreedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListView.swift; sourceTree = "<group>"; };
+		63EEFE4E2B72D1B700D229CA /* DogImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		631BF0562B73B33E00141C81 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				631BF0572B73B34B00141C81 /* ViewModifiers */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		631BF0572B73B34B00141C81 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				631BF0582B73B37200141C81 /* GridItems.swift */,
+				631BF05A2B73B38100141C81 /* ButtonModifier.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
 		63AC78FA2B6BC93F0022991A = {
 			isa = PBXGroup;
 			children = (
@@ -106,9 +129,11 @@
 		63AC79052B6BC93F0022991A /* PuppyPicker */ = {
 			isa = PBXGroup;
 			children = (
+				631BF0562B73B33E00141C81 /* Utilities */,
 				63AC79342B6BCAF40022991A /* App */,
 				63AC79372B6BCB5C0022991A /* Root */,
 				63AC79362B6BCB340022991A /* BreedList */,
+				63EEFE502B72DE3E00D229CA /* DogImage */,
 				63AC79352B6BCB260022991A /* IndividualBreed */,
 				63AC79332B6BCAEE0022991A /* Networking */,
 				63AC79322B6BCAEC0022991A /* Model */,
@@ -229,6 +254,22 @@
 			isa = PBXGroup;
 			children = (
 				63AC793B2B6BCBBD0022991A /* IndividualBreedView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		63EEFE502B72DE3E00D229CA /* DogImage */ = {
+			isa = PBXGroup;
+			children = (
+				63EEFE512B72DE5A00D229CA /* View */,
+			);
+			path = DogImage;
+			sourceTree = "<group>";
+		};
+		63EEFE512B72DE5A00D229CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63EEFE4E2B72D1B700D229CA /* DogImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -363,7 +404,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				631BF0592B73B37200141C81 /* GridItems.swift in Sources */,
 				638A28432B726D24005F1040 /* IndividualBreedViewModel.swift in Sources */,
+				63EEFE4F2B72D1B700D229CA /* DogImageView.swift in Sources */,
 				6321F1EC2B6C37CE00671F9F /* BreedListViewModel.swift in Sources */,
 				63AC793E2B6BCF7B0022991A /* Breed.swift in Sources */,
 				63AC79092B6BC93F0022991A /* ContentView.swift in Sources */,
@@ -371,6 +414,7 @@
 				63AC793C2B6BCBBD0022991A /* IndividualBreedView.swift in Sources */,
 				63AC79072B6BC93F0022991A /* PuppyPickerApp.swift in Sources */,
 				63AC79422B6BD98C0022991A /* BreedListView.swift in Sources */,
+				631BF05B2B73B38100141C81 /* ButtonModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

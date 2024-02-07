@@ -8,7 +8,7 @@
 import Foundation
 
 struct BreedResponse: Codable {
-    let message: [String: [String]] // Dictionary where key is the breed and value is an array of sub-breeds
+    let message: [String: [String]] // A dictionary where key is the breed and value is an array of sub-breeds
     let status: String
 }
 

@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct IndividualBreedView: View {
+    @State private var showingSheet = false
     @State private var isLoading = false
     @ObservedObject var viewModel = IndividualBreedViewModel()
+    let grid = GridItems()
     let breed: String
+    let displayName: String
     
     var body: some View {
         VStack {
@@ -21,14 +24,17 @@ struct IndividualBreedView: View {
                     if images.isEmpty {
                         Text("No subcategories available")
                     } else {
-                        List(images, id: \.self) { image in
-                            AsyncImage(url: URL(string: image), content: { image in
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                            }, placeholder: {
-                                ProgressView("Loading...")
-                            })
+                        ScrollView {
+                            LazyVGrid(columns: grid.gridItems, spacing: 1) {
+                                ForEach(images, id: \.self) { image in
+                                    NavigationLink(destination: DogImageView(displayName: displayName, image: image)) {
+                                        AsyncImage(url: URL(string: image))
+                                            .scaledToFit()
+                                            .frame(width: grid.imageDimension, height: grid.imageDimension)
+                                            .clipped()
+                                    }
+                                }
+                            }
                         }
                     }
                 } else {
@@ -36,13 +42,13 @@ struct IndividualBreedView: View {
                 }
             }
         }
-        .onAppear {
+        .onAppear() {
             viewModel.fetchImages(breed: breed)
         }
-        .navigationTitle(breed)
+        .navigationTitle(displayName.capitalized)
     }
 }
 
 #Preview {
-    IndividualBreedView(breed: "australian")
+    IndividualBreedView(breed: "Retriever", displayName: "Curly Retriever")
 }
