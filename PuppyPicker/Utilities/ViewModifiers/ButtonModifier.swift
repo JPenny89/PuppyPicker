@@ -8,14 +8,27 @@
 import SwiftUI
 
 struct ButtonModifier: ViewModifier {
+    
+    @Environment(\.dynamicTypeSize) var dynamicTypeSize
+    
     let greyColor = UIColor(named: "GreyColor")
     func body(content: Content) -> some View {
-        content
-            .font(.subheadline)
-            .fontWeight(.semibold)
-            .frame(width: 300, height: 44)
-            .background((Color.init(uiColor: greyColor ?? .white)))
-            .cornerRadius(8)
-            .padding()
+        
+        if dynamicTypeSize.isAccessibilitySize {
+            content
+                .fontWeight(.semibold)
+                .background((Color.init(uiColor: greyColor ?? .white)))
+                .cornerRadius(8)
+                .padding()
+        } else {
+            content
+                .font(.subheadline)
+                .fontWeight(.semibold)
+                .frame(width: 300, height: 44)
+                .background((Color.init(uiColor: greyColor ?? .white)))
+                .cornerRadius(8)
+                .padding()
+        }
+        
     }
 }

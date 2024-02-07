@@ -8,24 +8,32 @@
 import SwiftUI
 
 struct BreedListView: View {
-    @State private var isLoading = false
     @ObservedObject var viewModel = BreedListViewModel()
+    @State private var searchBreed = ""
+    @State private var isLoading = false
+    
     let greyColor = UIColor(named: "GreyColor")
+    
+    var filteredBreeds: [DogBreed] {
+        guard !searchBreed.isEmpty else { return viewModel.dogBreeds }
+        return viewModel.dogBreeds.filter { $0.displayName.localizedCaseInsensitiveContains(searchBreed)}
+    }
     
     var body: some View {
         NavigationView {
             if !viewModel.dogBreeds.isEmpty {
-                List(viewModel.dogBreeds, id: \.displayName) { dog in
+                List(filteredBreeds, id: \.displayName) { dog in
                     NavigationLink(destination: IndividualBreedView(breed: dog.breed, displayName: dog.displayName))
                     {
                         Text(dog.displayName.capitalized)
                     }
+                    .listRowSeparator(.hidden)
                     .listRowBackground(Capsule()
                         .fill(Color.init(uiColor: greyColor ?? .white))
                         .padding(2))
                 }
                 .navigationBarTitle("Breed List")
-                
+                .searchable(text: $searchBreed, prompt: "Search Breed")
             } else if viewModel.isLoading {
                 ProgressView("Loading...")
             } else {

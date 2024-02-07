@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct IndividualBreedView: View {
-    @State private var showingSheet = false
     @State private var isLoading = false
     @ObservedObject var viewModel = IndividualBreedViewModel()
+    
     let grid = GridItems()
     let breed: String
     let displayName: String
@@ -46,6 +46,7 @@ struct IndividualBreedView: View {
             viewModel.fetchImages(breed: breed)
         }
         .navigationTitle(displayName.capitalized)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
