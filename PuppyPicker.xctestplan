@@ -1,0 +1,36 @@
+{
+  "configurations" : [
+    {
+      "id" : "35AD06D5-05D2-4528-9EB4-86E503FA5255",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:PuppyPicker.xcodeproj",
+      "identifier" : "63AC79022B6BC93F0022991A",
+      "name" : "PuppyPicker"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:PuppyPicker.xcodeproj",
+        "identifier" : "63AC79122B6BC9420022991A",
+        "name" : "PuppyPickerTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:PuppyPicker.xcodeproj",
+        "identifier" : "63AC791C2B6BC9420022991A",
+        "name" : "PuppyPickerUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

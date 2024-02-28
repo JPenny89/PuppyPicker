@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DogImageView: View {
     @Environment(\.dismiss) var dismiss
-    let grid = GridItems()
+//    let grid = GridItems()
     let displayName: String
     var image: String
     
