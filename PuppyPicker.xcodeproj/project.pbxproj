@@ -18,7 +18,6 @@
 		63AC790E2B6BC9420022991A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63AC790D2B6BC9420022991A /* Preview Assets.xcassets */; };
 		63AC79182B6BC9420022991A /* PuppyPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC79172B6BC9420022991A /* PuppyPickerTests.swift */; };
 		63AC79222B6BC9420022991A /* PuppyPickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC79212B6BC9420022991A /* PuppyPickerUITests.swift */; };
-		63AC79242B6BC9420022991A /* PuppyPickerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC79232B6BC9420022991A /* PuppyPickerUITestsLaunchTests.swift */; };
 		63AC793C2B6BCBBD0022991A /* IndividualBreedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC793B2B6BCBBD0022991A /* IndividualBreedView.swift */; };
 		63AC793E2B6BCF7B0022991A /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC793D2B6BCF7B0022991A /* Breed.swift */; };
 		63AC79402B6BD1640022991A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC793F2B6BD1640022991A /* APIManager.swift */; };
@@ -59,7 +58,6 @@
 		63AC79172B6BC9420022991A /* PuppyPickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuppyPickerTests.swift; sourceTree = "<group>"; };
 		63AC791D2B6BC9420022991A /* PuppyPickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuppyPickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63AC79212B6BC9420022991A /* PuppyPickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuppyPickerUITests.swift; sourceTree = "<group>"; };
-		63AC79232B6BC9420022991A /* PuppyPickerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuppyPickerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		63AC793B2B6BCBBD0022991A /* IndividualBreedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualBreedView.swift; sourceTree = "<group>"; };
 		63AC793D2B6BCF7B0022991A /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		63AC793F2B6BD1640022991A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				63AC79212B6BC9420022991A /* PuppyPickerUITests.swift */,
-				63AC79232B6BC9420022991A /* PuppyPickerUITestsLaunchTests.swift */,
 			);
 			path = PuppyPickerUITests;
 			sourceTree = "<group>";
@@ -437,7 +434,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				63AC79222B6BC9420022991A /* PuppyPickerUITests.swift in Sources */,
-				63AC79242B6BC9420022991A /* PuppyPickerUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

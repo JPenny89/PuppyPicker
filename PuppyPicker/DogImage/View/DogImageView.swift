@@ -20,6 +20,7 @@ struct DogImageView: View {
                 dismiss()
             }
             .modifier(ButtonModifier())
+            .accessibilityIdentifier("findMoreButton")
         }
         .navigationBarBackButtonHidden()
     }

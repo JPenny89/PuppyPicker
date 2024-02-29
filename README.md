@@ -12,4 +12,8 @@ I used the MVVM architectural pattern in this project and made the API calls usi
 - I created a view modifier named SquareImageView, which clips the size of images and prevents them from taking up too much of the screen.
 - Added an app icon.
 - Added an accessibility feature to the ButtonModifier which is used in the third screen. If the device's font is increased beyond a certain size, the constraints are removed and the button is able to fill the available space. This also allows room for the button text.
-- Created some simple Unit Tests.
+- Created some simple Unit Tests & UI Tests.
+
+## If I were to continue working on this I would...
+
+- Create a mock API response for testing.

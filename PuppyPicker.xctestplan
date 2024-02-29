@@ -24,7 +24,6 @@
       }
     },
     {
-      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:PuppyPicker.xcodeproj",
         "identifier" : "63AC791C2B6BC9420022991A",

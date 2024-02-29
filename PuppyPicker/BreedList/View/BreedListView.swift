@@ -34,6 +34,7 @@ struct BreedListView: View {
                 }
                 .navigationBarTitle("Breed List")
                 .searchable(text: $searchBreed, prompt: "Search Breed")
+                .accessibilityIdentifier("searchField")
             } else if viewModel.isLoading {
                 ProgressView("Loading...")
             } else {

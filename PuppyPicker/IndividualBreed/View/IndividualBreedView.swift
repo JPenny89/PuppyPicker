@@ -35,7 +35,9 @@ struct IndividualBreedView: View {
                                     }
                                 }
                             }
+                            .accessibilityIdentifier("LazyVGrid label")
                         }
+                        .accessibilityIdentifier("Scrollview label")
                     }
                 } else {
                     Text("No data available")
